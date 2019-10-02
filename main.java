@@ -3,6 +3,7 @@ import java.util.concurrent.TimeUnit;
 public class main {
   public static void main(String[] args) throws InterruptedException {
 	monster bob = new monster();
+	monster bobee = new monster();
 	print(bob.spd);
 	print(bob.str);
 	print(bob.acc);
@@ -88,12 +89,62 @@ public class main {
     print(me.strength);
     print("vs");
     print(bob.str);
-    if(me.stength > bob.str) {
+    if(me.strength > bob.str) {
     	print("You were stronger than BOB. 1 point for you.");
     	tally = tally + 1;
     }
     else {
     	print("BOB lifted 100lb whereas you only did 5!");
+    	tally = tally - 1;
+    }
+    TimeUnit.SECONDS.sleep(1);
+    print("The results just came in and ...");
+    TimeUnit.SECONDS.sleep(2);
+    if(tally >= 2) {
+    	print("You WIN!");
+    }
+    else {
+    	print("You lost.");
+    }
+    bob = null;
+    print("The monster BOBEE FRANKENMEIER appears. ");
+    print("If you beat him in 2 or more out of 3 trials, you will win.");
+    print("First trial, The accuracy test, see who is more accurate! For this we have archery.");
+    print(me.accuracy);
+    print("vs");
+    print(bobee.acc);
+    if(me.accuracy > bobee.acc) {
+    	print("You were better than BOBEE. 1 point for you.");
+    	tally = tally + 1;
+    }
+    else {
+    	print("BOBEE bested you at archery, better luck next time!");
+    	tally = tally - 1;
+    }
+    TimeUnit.SECONDS.sleep(4);
+    print("Second trial, The speed test, see who is faster! For this we have a sprint.");
+    print(me.speed);
+    print("vs");
+    print(bobee.spd);
+    if(me.speed > bobee.spd) {
+    	print("You were faster than BOBEE. 1 point for you.");
+    	tally = tally + 1;
+    }
+    else {
+    	print("BOBEE was way faster than you, better luck next time!");
+    	tally = tally - 1;
+    }
+    TimeUnit.SECONDS.sleep(4);
+    print("Third trial, The strength test, see who is stronger! For this we have weightlifting.");
+    print(me.strength);
+    print("vs");
+    print(bobee.str);
+    if(me.strength > bobee.str) {
+    	print("You were stronger than BOBEE. 1 point for you.");
+    	tally = tally + 1;
+    }
+    else {
+    	print("BOBEE lifted 100lb whereas you only did 5!");
     	tally = tally - 1;
     }
     TimeUnit.SECONDS.sleep(1);
