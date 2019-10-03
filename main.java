@@ -4,9 +4,6 @@ public class main {
   public static void main(String[] args) throws InterruptedException {
 	monster bob = new monster();
 	monster bobee = new monster();
-	print(bob.spd);
-	print(bob.str);
-	print(bob.acc);
     Scanner in = new Scanner(System.in);
     int speed = 100;
     int acc = 100;
