@@ -4,6 +4,7 @@ public class monster{
 	Random rand = new Random();
 	int str = rand.nextInt(100);
 	int acc = rand.nextInt(100);
+	//coment
 	int spd = rand.nextInt(100);{
 		while((str + acc + spd) > 225 || (str + acc + spd) < 100) {
 			int str = rand.nextInt(75);
